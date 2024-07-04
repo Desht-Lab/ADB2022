@@ -1,11 +1,12 @@
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADB 2022 Spaces</title>
     <link rel="stylesheet" href="https://desht-lab.github.io/Gotham/stylesheet.css">
     <style>
         body {
-            font-family: Gotham, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 20px;
         }
         .container {
@@ -15,26 +16,47 @@
         .dropdown {
             margin-bottom: 20px;
         }
+        label {
+            font-size: 1.2em;
+            color: #444;
+        }
+        select {
+            font-size: 1em;
+            padding: 0.5em;
+            font-family: Arial, sans-serif;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #ffffff;
+            color: #444444;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="28" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position-x: 100%;
+            background-position-y: 50%;
+            width: 330px;
+        }
         iframe {
             width: 100%;
-            height: 500px;
-            border: 1px solid #ccc;
+            border: none;
+            height: 100%; /* Adjust height as needed */
         }
     </style>
 </head>
 <body>
-    <div class="container">
+
         <div class="dropdown">
-            <label for="links">Выберите ссылку:</label>
+            <label for="links">Выберите пространство:</label>
             <select id="links" onchange="updateIframe()">
-                <option value="countries_cons_corr.html">Страны по корреляции потребления</option>
-                <option value="countries_gva_corr.html">Страны по корреляции производства</option>
-                <option value="ind_cons_maxProx.html">Индустрии по проксимити потребления</option>
-                <option value="ind_prod_maxProx.html">Индустрии по проксимити производства</option>
+                <option value="https://desht-lab.github.io/ADB2022/countries_cons_corr.html">Страны по корреляции потребления</option>
+                <option value="https://desht-lab.github.io/ADB2022/countries_gva_corr.html">Страны по корреляции производства</option>
+                <option value="https://desht-lab.github.io/ADB2022/ind_cons_maxProx.html">Индустрии по проксимити потребления</option>
+                <option value="https://desht-lab.github.io/ADB2022/ind_prod_maxProx.html">Индустрии по проксимити производства</option>
             </select>
         </div>
-        <iframe id="iframe" src="countries_cons_corr.html"></iframe>
-    </div>
+        <iframe id="iframe" src="https://desht-lab.github.io/ADB2022/countries_cons_corr.html"></iframe>
+   
 
     <script>
         function updateIframe() {
